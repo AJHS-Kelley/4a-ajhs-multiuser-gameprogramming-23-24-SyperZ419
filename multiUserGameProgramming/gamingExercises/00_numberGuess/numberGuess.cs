@@ -1,4 +1,4 @@
-// Xavier Oliver, Number Guess, v0.2
+// Xavier Oliver, Number Guess, v0.3
 /*
 Generate secret number from a defined range of numbers.
 Print game instructions including range and number of guesses allowed.
@@ -78,14 +78,14 @@ namespace numberGuess
                 // GENERATE SECRET NUMBER
                 Random rndNum = new Random();
                 secretNumber = rndNum.Next(rangeMin, rangeMax);
-                Console.WriteLine(secretNumber) // REMOVE AFTER TESTING
+                Console.WriteLine(secretNumber); // REMOVE AFTER TESTING
                 Console.WriteLine("Player Score: " + playerScore + "\n");
                 Console.WriteLine("CPU Score: " + cpuScore + "\n");
                 // START EACH ROUND
                 for (int i = 0; i < numGuesses; i++) {
                     // Code to guess number goes here
-                    Console.WriteLine("You have used " + numAttempts + " this round.\n")
-                    Console.WriteLine("Please guess a number between " + rangeMin + "and " + rangeMax + ".\n");
+                    Console.WriteLine("You have used " + numAttempts + " attempts this round.\n");
+                    Console.WriteLine("Please guess a number between " + rangeMin + " and " + rangeMax + ".\n");
                     playerGuess = System.Convert.ToInt32(Console.ReadLine());
                     if (playerGuess == secretNumber) {
                         Console.WriteLine("You got it right! You've earned a point.");
