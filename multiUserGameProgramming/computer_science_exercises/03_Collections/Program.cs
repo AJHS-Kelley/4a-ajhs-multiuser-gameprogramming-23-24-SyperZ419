@@ -1,4 +1,5 @@
-﻿using System;
+﻿// 03_Collections, Xavier Oliver, v0.0
+using System;
 
 namespace _03_Collections
 {
@@ -6,7 +7,7 @@ namespace _03_Collections
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
