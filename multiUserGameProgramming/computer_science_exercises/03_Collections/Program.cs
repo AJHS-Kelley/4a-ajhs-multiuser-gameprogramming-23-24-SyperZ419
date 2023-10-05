@@ -1,4 +1,4 @@
-﻿// 03_Collections, Xavier Oliver, v0.3a
+﻿// 03_Collections, Xavier Oliver, v0.4a
 using System;
 
 namespace _03_Collections
@@ -90,6 +90,16 @@ namespace _03_Collections
             Console.WriteLine();
             Console.WriteLine("GPA: \n" + String.Join(", ", GPA));
             Console.WriteLine();
+
+            // Common Bugs working with arrays
+            // Index Out of Bounds -- Accessing an element that does not exist
+            // Console.WriteLine(breakfastFoods[7]);
+            // Fix: Console.WriteLine(breakfastFoods[4]);
+
+            // Incorrect Data Type
+            // testScores[0] = "Billy"; // If possible, use the correct Convert.() If not possible, manually change to correct data type.
+
+
         }  
     }
 }
