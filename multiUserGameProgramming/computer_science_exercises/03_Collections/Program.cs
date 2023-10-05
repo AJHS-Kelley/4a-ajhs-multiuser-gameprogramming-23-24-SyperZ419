@@ -1,4 +1,4 @@
-﻿// 03_Collections, Xavier Oliver, v0.1c
+﻿// 03_Collections, Xavier Oliver, v0.1d
 using System;
 
 namespace _03_Collections
@@ -41,6 +41,12 @@ namespace _03_Collections
             Console.WriteLine("GPA: \n" + String.Join("\n", GPA));
             Console.WriteLine();
             */
+
+            // Determining Array Length
+            Console.WriteLine("The length of each array is:\n");
+            Console.WriteLine("breakfastFoods: " + breakfastFoods.Length);
+            Console.WriteLine("testScores: " + testScores.Length);
+            Console.WriteLine("GPA: " + GPA.Length);
         }  
     }
 }
