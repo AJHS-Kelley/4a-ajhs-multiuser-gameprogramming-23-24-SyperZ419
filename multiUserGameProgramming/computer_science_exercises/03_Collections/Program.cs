@@ -1,4 +1,4 @@
-﻿// 03_Collections, Xavier Oliver, v0.4a
+﻿// 03_Collections, Xavier Oliver, v0.5a
 using System;
 
 namespace _03_Collections
@@ -22,6 +22,7 @@ namespace _03_Collections
             string[] breakfastFoods = {"Bacon", "Waffles", "Pancakes", "Cereal", "Parfait"};
             int[] testScores = {99, 100, 25, 15, 27, 35};
             float[] GPA = {3.14f, 2.25f, 1.74f, 1.99f, 0.99f, 4.25f};
+            
 
             // Print Array Elements -- All Elements on Single Line
             Console.WriteLine("The elements for each array are:\n");
@@ -31,6 +32,7 @@ namespace _03_Collections
             Console.WriteLine();
             Console.WriteLine("GPA: \n" + String.Join(", ", GPA));
             Console.WriteLine();
+            
 
             /* Print Array Contents -- Each Element on Seperate Lines
             Console.WriteLine("The elements for each array are:\n");
@@ -67,7 +69,7 @@ namespace _03_Collections
             Console.WriteLine("GPA: " + GPA[2]);
             */
 
-            // Changing Array Elements -- 
+            /* Changing Array Elements -- 
             breakfastFoods[0] = "Fried Squid";
             testScores[0] = 59;
             GPA[0] = 1.34f;
@@ -78,6 +80,7 @@ namespace _03_Collections
             Console.WriteLine();
             Console.WriteLine("GPA: \n" + String.Join(", ", GPA));
             Console.WriteLine();
+            
 
             // WYOC -- Update 5th element from each array
             breakfastFoods[4] = "French Toast";
@@ -90,6 +93,7 @@ namespace _03_Collections
             Console.WriteLine();
             Console.WriteLine("GPA: \n" + String.Join(", ", GPA));
             Console.WriteLine();
+            
 
             // Common Bugs working with arrays
             // Index Out of Bounds -- Accessing an element that does not exist
@@ -98,7 +102,24 @@ namespace _03_Collections
 
             // Incorrect Data Type
             // testScores[0] = "Billy"; // If possible, use the correct Convert.() If not possible, manually change to correct data type.
+            */
 
+            // Common Array Methods - Sort() -- Sorts in alphabetical or numerical order, ascending
+            int[] newIntArr = {25, -25, 0, -10, 15, 50, -35, 75, -155, 95, -65, 85};
+            string[] newStringArr = {"Zebra", "Aardvark", "Emu", "Cow", "Frog", "Platypus", "Gorilla", "Ibis", "Horse"};
+            Console.WriteLine("The elements for each array are:\n");
+            Console.WriteLine("newIntArr: \n" + String.Join(", ", newIntArr));
+            Console.WriteLine();
+            Console.WriteLine("newStringArr: \n" + String.Join(", ", newStringArr));
+            Console.WriteLine();
+            // Sort Each Array
+            Array.Sort(newIntArr);
+            Array.Sort(newStringArr);
+            Console.WriteLine("The SORTED elements for each array are:\n");
+            Console.WriteLine("newIntArr: \n" + String.Join(", ", newIntArr));
+            Console.WriteLine();
+            Console.WriteLine("newStringArr: \n" + String.Join(", ", newStringArr));
+            Console.WriteLine();
 
         }  
     }
