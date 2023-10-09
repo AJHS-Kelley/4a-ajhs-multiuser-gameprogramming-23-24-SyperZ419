@@ -1,4 +1,4 @@
-// Xavier Oliver, Number Guess, v0.3
+// Xavier Oliver, Number Guess, v0.4
 /*
 Generate secret number from a defined range of numbers.
 Print game instructions including range and number of guesses allowed.
@@ -99,9 +99,10 @@ namespace numberGuess
                         }
                     numAttempts++;
                     }
-                if (playerGuess != secretNumber) {
-                    cpuScore++;
-                    Console.WriteLine("You ran out of guesses. The CPU gets a point.\n");
+                    if (numGuesses == numAttempts) {
+                        cpuScore++;
+                        Console.WriteLine("You ran out of guesses. The CPU gets a point.\n");
+                        numAttempts = 0;
                 }
 
             
