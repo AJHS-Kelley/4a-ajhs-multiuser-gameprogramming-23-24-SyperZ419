@@ -1,4 +1,4 @@
-// Xavier Oliver, MethodsParameters, v0.2
+// Xavier Oliver, MethodsParameters, v0.3
 using System;
 
 namespace MethodsParameters
@@ -35,6 +35,10 @@ namespace MethodsParameters
             }
         }
 
+        static void MakeEggs(int num, string style)
+        {
+            Console.WriteLine("You have ordered " + num + " eggs cooked " + style + ".\n");
+        }
 
 
         static void Main(string[] args)
@@ -42,7 +46,8 @@ namespace MethodsParameters
         {
             //MyMethod();
             //DoubleUp();
-            MakePancakes();
+            //MakePancakes();
+            MakeEggs(8, "scrambled");
         }
 
     }
