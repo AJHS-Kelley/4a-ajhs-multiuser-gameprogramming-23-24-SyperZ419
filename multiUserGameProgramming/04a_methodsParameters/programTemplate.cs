@@ -25,11 +25,24 @@ namespace MethodsParameters
             Console.WriteLine(sum);
             return sum;
         }
+
+        // Methods with Parameters
+        static void MakePancakes(int num)
+        {
+            for (int i = 0; i < num; i++) 
+            {
+                Console.WriteLine("One pancake has finished production.\n");
+            }
+        }
+
+
+
         static void Main(string[] args)
         
         {
             //MyMethod();
-            DoubleUp();
+            //DoubleUp();
+            MakePancakes();
         }
 
     }
