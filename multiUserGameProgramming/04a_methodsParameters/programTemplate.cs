@@ -1,4 +1,4 @@
-// Xavier Oliver, MethodsParameters, v0.1
+// Xavier Oliver, MethodsParameters, v0.2
 using System;
 
 namespace MethodsParameters
@@ -12,9 +12,24 @@ namespace MethodsParameters
         {
             Console.WriteLine("I like mine with waffles, chicken, and eggs, with a side of hash-browns\n");
         }
-        static void Main(string[] args)
+        // static -- This method belongs to the current class, it is NOT and object
+        // void -- This method has no return value
+
+        static int DoubleUp()
         {
-            MyMethod();
+            int sum = 0;
+            Console.WriteLine("This method will double a number and return it.\n");
+            Console.WriteLine("Please enter a number on the next line.\n");
+            sum = System.Convert.ToInt32(Console.ReadLine());
+            sum *= 2;
+            Console.WriteLine(sum);
+            return sum;
+        }
+        static void Main(string[] args)
+        
+        {
+            //MyMethod();
+            DoubleUp();
         }
 
     }
