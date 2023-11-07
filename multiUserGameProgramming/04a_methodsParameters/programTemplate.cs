@@ -1,4 +1,4 @@
-// Xavier Oliver, MethodsParameters, v0.4
+// Xavier Oliver, MethodsParameters, v0.5
 using System;
 
 namespace MethodsParameters
@@ -52,6 +52,24 @@ namespace MethodsParameters
             Console.WriteLine("My favorite child is " + child3);
         }
 
+        // Method Overloading
+        // Find Sum of Int
+        static int FindSum(int x, int y)
+        {
+            int sum = x + y;
+            Console.WriteLine("Sum: " + sum);
+            return sum;
+        }
+
+        // Find Sum of Double
+        static double FindSum(double x, double y)
+        {
+            double sum = x + y;
+            Console.WriteLine("Sum: " + sum);
+            return sum;
+        }
+
+
         static void Main(string[] args)
         
         {
@@ -62,6 +80,9 @@ namespace MethodsParameters
             //MakeBurger();
             //MakeBurger(27);
             //AllMyChildren(child3: "Kobeni", child2: "Power", child1: "Aki");
+            //FindSum(3, 5); // Two Ints
+            //FindSum(2.77, 8.56); // Two Doubles
+            //FindSum(7, 4.78); // One of Each
 
         }
 
