@@ -1,4 +1,4 @@
-// Xavier Oliver, MethodsParameters, v0.3
+// Xavier Oliver, MethodsParameters, v0.4
 using System;
 
 namespace MethodsParameters
@@ -40,9 +40,16 @@ namespace MethodsParameters
             Console.WriteLine("You have ordered " + num + " eggs cooked " + style + ".\n");
         }
 
+        // Using Defaults for Parameters
         static void MakeBurger(int num = 1)
         {
             Console.WriteLine("I am going to cook " + num + " hamburger(s).\n");
+        }
+
+        // Named Arguments
+        static void AllMyChildren(string child1, string child2, string child3)
+        {
+            Console.WriteLine("My favorite child is " + child3);
         }
 
         static void Main(string[] args)
@@ -52,8 +59,10 @@ namespace MethodsParameters
             //DoubleUp();
             //MakePancakes();
             //MakeEggs(8, "scrambled");
-            MakeBurger();
-            MakeBurger(27);
+            //MakeBurger();
+            //MakeBurger(27);
+            //AllMyChildren(child3: "Kobeni", child2: "Power", child1: "Aki");
+
         }
 
     }
