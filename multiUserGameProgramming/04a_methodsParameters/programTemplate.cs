@@ -1,4 +1,6 @@
 // Xavier Oliver, MethodsParameters, v0.5
+// All examples provided. 
+
 using System;
 
 namespace MethodsParameters
