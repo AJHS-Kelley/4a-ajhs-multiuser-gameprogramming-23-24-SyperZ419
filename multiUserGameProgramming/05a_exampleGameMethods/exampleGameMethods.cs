@@ -5,7 +5,7 @@ namespace ExampleGameMethods
 {
     class ExampleGameMethods
     {
-        static string ChooseEnemy()
+        static string ChooseEnemy() // Chooses a random enemy from an array. 
         {
             Random rndNum = new Random();
             string[] enemyList = {"Goblin", "Goblin Chief", "Orc", "Skeleton", "Dragon", "Slime", "Yamato-no-Orochi", "Hydra", "Dark Warlock"}; // List of Potential Enemies
@@ -14,12 +14,18 @@ namespace ExampleGameMethods
             return enemy;
         }
 
-        /*static void MethodTwo()
+        static int generateStats()
         {
-            pass;
+            int[] stats = {}
+            stats.Append(rndNm.Next(1, 30)); // Attack
+            stats.Append(rndNm.Next(1, 30)); // Defense
+            stats.Append(rndNm.Next(1, 30)); // Speed
+            stats.Append(rndNm.Next(1, 30)); // Accuracy
+            Console.WriteLine(stats);
+            return stats;
         }
 
-        static void MethodThree()
+        /*static void MethodThree()
         {
             pass;
         }
