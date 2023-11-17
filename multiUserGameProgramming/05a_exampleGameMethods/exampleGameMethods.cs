@@ -10,17 +10,18 @@ namespace ExampleGameMethods
             Random rndNum = new Random();
             string[] enemyList = {"Goblin", "Goblin Chief", "Orc", "Skeleton", "Dragon", "Slime", "Yamato-no-Orochi", "Hydra", "Dark Warlock"}; // List of Potential Enemies
             string enemy = enemyList[rndNum.Next(0, enemyList.Length - 1)];
-            Console.WriteLine("You have encountered " + enemy + " !");
+            Console.WriteLine("You have encountered a " + enemy + " !");
             return enemy;
         }
 
         static int generateStats()
         {
+            Random rndNum = new Random 
+            int i = 0
             int[] stats = {}
+            while i < 4; i++
             stats.Append(rndNm.Next(1, 30)); // Attack
-            stats.Append(rndNm.Next(1, 30)); // Defense
-            stats.Append(rndNm.Next(1, 30)); // Speed
-            stats.Append(rndNm.Next(1, 30)); // Accuracy
+            
             Console.WriteLine(stats);
             return stats;
         }
