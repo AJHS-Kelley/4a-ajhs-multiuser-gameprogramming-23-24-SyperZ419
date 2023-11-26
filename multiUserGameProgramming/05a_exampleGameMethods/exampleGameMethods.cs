@@ -59,6 +59,10 @@ namespace ExampleGameMethods
             }
         }
 
+        static string PlayerTurn()
+        {
+            pass;
+        }
 
 
 
