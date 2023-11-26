@@ -1,4 +1,4 @@
-// Xavier Oliver, Template, v0.3
+// Xavier Oliver, Template, v0.4
 using System;
 
 namespace ExampleGameMethods
@@ -11,7 +11,7 @@ namespace ExampleGameMethods
             string[] enemyList = {"Goblin", "Goblin Chief", "Orc", "Skeleton", "Dragon", "Slime", "Yamato-no-Orochi", "Hydra", "Dark Warlock"}; // List of Potential Enemies
             string enemy = enemyList[rndNum.Next(0, enemyList.Length - 1)];
             Console.WriteLine("You have encountered a " + enemy + "!");
-            return enemy; // Returns chosen enemy
+            return enemy; // Returns chosen enemy.
         }
 
         static int[] GenerateStats() // Generates player stats. No parameters.
@@ -33,7 +33,7 @@ namespace ExampleGameMethods
             return stats; // Returns array of stats.
         }
 
-        static string namePlayer()
+        static string namePlayer()  // Obtains character's name from user input. No parameters.
         {
             Console.WriteLine("Name your character.");
             string name = Console.ReadLine();
@@ -48,7 +48,7 @@ namespace ExampleGameMethods
                 name = Console.ReadLine();
                 Console.WriteLine("Character name confirmed");
             }
-            return name;
+            return name; // Returns name of character.
         }
 
         /*static void MethodFour()
