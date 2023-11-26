@@ -60,14 +60,14 @@ namespace ExampleGameMethods
             }
         }
 
-        /*static string PlayerTurn()
+        static string PlayerTurn(int playerCurrentHealth)
         {
             while (playerHealth > 0)
             {
                 Console.WriteLine(skillList);
                 Console.WriteLine(playerName + ",please select an action from your skill list");
                 string skill = Console.ReadLine();
-                int count = skillList.Count(skill);
+                int count = skillList.Count(x => x == skill);
                 Console.WriteLine(count);
                 if (count > 0)
                 {
@@ -80,9 +80,9 @@ namespace ExampleGameMethods
                     continue;
                 }
             }
-        }*/
+        }   return skill;
 
-        static string PlayerItemChoose()
+        /*static string PlayerItemChoose()
         {
             string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
             Console.WriteLine(playerName + ",please select an item from your inventory.");
@@ -100,7 +100,7 @@ namespace ExampleGameMethods
                     continue
                 }
             }
-        }   return item
+        }   return item*/
 
 
 
@@ -113,6 +113,7 @@ namespace ExampleGameMethods
             
             int[] stats = GenerateStats();
             ChooseEnemy();
+            PlayerTurn(playerHealth);
             GameOver(playerHealth);
         }
 
