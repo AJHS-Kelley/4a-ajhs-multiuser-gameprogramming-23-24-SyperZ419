@@ -51,10 +51,10 @@ namespace ExampleGameMethods
             return name; // Returns name of character.
         }
 
-        /*static void MethodFour()
+        static void gameOver()
         {
             pass;
-        }*/
+        }
 
 
 
