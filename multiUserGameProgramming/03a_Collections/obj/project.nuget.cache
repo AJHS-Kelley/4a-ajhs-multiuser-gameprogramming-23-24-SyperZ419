@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Epnbb8TlUT20n/q0kiKrDua2PKfbQ791uKEDjcrkFzHAVfnQgMJ1NkJQKiiF430MHJkgENVYttZ6UtKp5dl2NA==",
+  "dgSpecHash": "4kYcnCoXAm7zf1Zfj6+hVp0cpsicNG+D9gsil7B4l5mdt0UWhGA8yz58XNwXD9MzRLrFc12yVOL4/Wx0fMwYOg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\s11328481\\Downloads\\Github\\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\\multiUserGameProgramming\\computer_science_exercises\\03_Collections\\03_Collections.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\s11328481.DCPS\\Downloads\\GitHub\\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\\multiUserGameProgramming\\03a_Collections\\03_Collections.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\s11328481.DCPS\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
   "logs": []
 }
