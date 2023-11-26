@@ -51,7 +51,7 @@ namespace ExampleGameMethods
             }
             return name; // Returns name of character.
         }
-
+            string playerName = NamePlayer();
         static void GameOver(int playerCurrentHealth) // Checks to see if the player's health is less than or equal to zero, then tells them the game has ended. Requires player's current health. No return.
         {
             if (playerCurrentHealth <= 0)
@@ -84,8 +84,23 @@ namespace ExampleGameMethods
 
         static string PlayerItemChoose()
         {
-            pass;
-        }
+            string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
+            Console.WriteLine(playerName + ",please select an item from your inventory.");
+            string item = Console.ReadLine();
+            for (i in range (itemList.Length - 1))
+            {
+                if (item == itemList[i])
+                {
+                    Console.WriteLine("You used " + item);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Chosen item not found.")
+                    continue
+                }
+            }
+        }   return item
 
 
 
@@ -93,9 +108,9 @@ namespace ExampleGameMethods
         static void Main(string[] args)
         {
             string[] skillList = {"fireball", "icebeam", "thunderbolt","sword slash", "kamikaze", "heal", "guard", "dark void", "holy wrath"};
-            string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
+            
             int playerHealth = 150;
-            string playerName = NamePlayer();
+            
             int[] stats = GenerateStats();
             ChooseEnemy();
             GameOver(playerHealth);
