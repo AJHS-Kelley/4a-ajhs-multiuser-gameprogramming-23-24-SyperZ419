@@ -33,7 +33,7 @@ namespace ExampleGameMethods
             return stats; // Returns array of stats.
         }
 
-        /*static void MethodThree()
+        static string namePlayer()
         {
             pass;
         }
@@ -41,7 +41,7 @@ namespace ExampleGameMethods
         static void MethodFour()
         {
             pass;
-        }*/
+        }
 
 
 
@@ -51,6 +51,9 @@ namespace ExampleGameMethods
         
         static void Main(string[] args)
         {
+            string[] skillList = {"fireball", "icebeam", "thunderbolt","sword slash", "kamikaze", "heal", "guard", "dark void", "holy wrath"};
+            string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
+            int playerHealth = 150;
             int[] stats = GenerateStats();
             ChooseEnemy();
         }
