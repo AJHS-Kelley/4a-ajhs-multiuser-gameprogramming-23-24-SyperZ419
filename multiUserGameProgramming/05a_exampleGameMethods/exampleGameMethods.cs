@@ -87,7 +87,7 @@ namespace ExampleGameMethods
             string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
             Console.WriteLine(playerName + ",please select an item from your inventory.");
             string item = Console.ReadLine();
-            for (i in range (itemList.Length - 1))
+            for (i in range(itemList.Length - 1))
             {
                 if (item == itemList[i])
                 {
