@@ -35,13 +35,26 @@ namespace ExampleGameMethods
 
         static string namePlayer()
         {
-            pass;
+            Console.WriteLine("Name your character.");
+            string name = Console.ReadLine();
+            Console.WriteLine("Your input name is " + name + " correct?\n Please type 1(yes) or 2(no)");
+            int nameConfirm = System.Convert.ToInt32(Console.ReadLine());
+            if (nameConfirm == 1)
+            {
+                Console.WriteLine("Character name confirmed");
+            } else 
+            {
+                Console.WriteLine("Please re-input the name of your character");
+                name = Console.ReadLine();
+                Console.WriteLine("Character name confirmed");
+            }
+            return name;
         }
 
-        static void MethodFour()
+        /*static void MethodFour()
         {
             pass;
-        }
+        }*/
 
 
 
@@ -54,6 +67,7 @@ namespace ExampleGameMethods
             string[] skillList = {"fireball", "icebeam", "thunderbolt","sword slash", "kamikaze", "heal", "guard", "dark void", "holy wrath"};
             string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
             int playerHealth = 150;
+            namePlayer();
             int[] stats = GenerateStats();
             ChooseEnemy();
         }
