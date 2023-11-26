@@ -42,7 +42,8 @@ namespace ExampleGameMethods
             if (nameConfirm == 1)
             {
                 Console.WriteLine("Character name confirmed");
-            } else 
+            } 
+            else 
             {
                 Console.WriteLine("Please re-input the name of your character");
                 name = Console.ReadLine();
@@ -59,12 +60,32 @@ namespace ExampleGameMethods
             }
         }
 
-        static string PlayerTurn()
+        /*static string PlayerTurn()
+        {
+            while (playerHealth > 0)
+            {
+                Console.WriteLine(skillList);
+                Console.WriteLine(playerName + ",please select an action from your skill list");
+                string skill = Console.ReadLine();
+                int count = skillList.Count(skill);
+                Console.WriteLine(count);
+                if (count > 0)
+                {
+                    Console.WriteLine("You used " + skill);
+                    break;
+                } 
+                else
+                {
+                    Console.WriteLine("Chosen skill not found");
+                    continue;
+                }
+            }
+        }*/
+
+        static string PlayerItemChoose()
         {
             pass;
         }
-
-
 
 
 
@@ -74,7 +95,7 @@ namespace ExampleGameMethods
             string[] skillList = {"fireball", "icebeam", "thunderbolt","sword slash", "kamikaze", "heal", "guard", "dark void", "holy wrath"};
             string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
             int playerHealth = 150;
-            NamePlayer();
+            string playerName = NamePlayer();
             int[] stats = GenerateStats();
             ChooseEnemy();
             GameOver(playerHealth);
