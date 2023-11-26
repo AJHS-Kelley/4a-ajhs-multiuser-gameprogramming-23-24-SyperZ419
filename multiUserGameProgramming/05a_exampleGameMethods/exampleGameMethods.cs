@@ -33,7 +33,7 @@ namespace ExampleGameMethods
             return stats; // Returns array of stats.
         }
 
-        static string namePlayer()  // Obtains character's name from user input. No parameters.
+        static string NamePlayer()  // Obtains character's name from user input. No parameters.
         {
             Console.WriteLine("Name your character.");
             string name = Console.ReadLine();
@@ -51,9 +51,12 @@ namespace ExampleGameMethods
             return name; // Returns name of character.
         }
 
-        static void gameOver()
+        static void GameOver(int playerCurrentHealth) // Checks to see if the player's health is less than or equal to zero, then tells them the game has ended. Requires player's current health. No return.
         {
-            pass;
+            if (playerCurrentHealth <= 0)
+            {
+                Console.WriteLine("You have lost all of your health. \nGame Over.");
+            }
         }
 
 
@@ -67,9 +70,10 @@ namespace ExampleGameMethods
             string[] skillList = {"fireball", "icebeam", "thunderbolt","sword slash", "kamikaze", "heal", "guard", "dark void", "holy wrath"};
             string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
             int playerHealth = 150;
-            namePlayer();
+            NamePlayer();
             int[] stats = GenerateStats();
             ChooseEnemy();
+            GameOver(playerHealth);
         }
 
         
