@@ -145,10 +145,29 @@ namespace ExampleGameMethods
             }
         }   return item*/
 
-        static int DamageCalc(int skillUsed, int enemyAttack, int playerDefense)
+        static float DamageCalc(int skillUsed, int enemyAttack, int playerDefense)
         {
-            pass;
-        }
+            int damageTaken = enemyAttack - playerDefense;
+            if (damageTaken <= 0)
+            {
+                damageTaken = 0;
+                Console.WriteLine("You took no damage.");
+            }
+            else if (skillUsed == 7)
+            {
+                bool guardActive = true;
+                if (guardActive == true)
+                {
+                    damageTaken /= 2;
+                    Console.WriteLine("Since guard was active, you took " + damageTaken + " damage.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("You took " + damageTaken + " damage.");
+            }
+        }      
+        
             
 
             
@@ -163,7 +182,7 @@ namespace ExampleGameMethods
             int[] stats = GenerateStats();
             ChooseEnemy();
             int skill = PlayerTurn(150, playerName);
-            DamageCalc(skill, 45, stats[1]);
+            DamageCalc(7, 45, stats[1]);
             GameOver(0);
         }
 
