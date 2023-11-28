@@ -145,7 +145,16 @@ namespace ExampleGameMethods
             }
         }   return item*/
 
-        static
+        static int DamageCalc(int skillUsed, int enemyAttack, int playerDefense)
+        {
+            pass;
+        }
+            
+
+            
+        
+            
+        
 
         
         static void Main(string[] args)
@@ -153,8 +162,8 @@ namespace ExampleGameMethods
             string playerName = NamePlayer();
             int[] stats = GenerateStats();
             ChooseEnemy();
-            skill = PlayerTurn(150, playerName);
-            
+            int skill = PlayerTurn(150, playerName);
+            DamageCalc(skill, 45, stats[1]);
             GameOver(0);
         }
 
