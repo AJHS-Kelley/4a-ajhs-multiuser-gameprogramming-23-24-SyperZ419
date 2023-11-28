@@ -1,0 +1,15 @@
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\bin\Debug\net5.0\03_Collections.exe
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\bin\Debug\net5.0\03_Collections.deps.json
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\bin\Debug\net5.0\03_Collections.runtimeconfig.json
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\bin\Debug\net5.0\03_Collections.runtimeconfig.dev.json
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\bin\Debug\net5.0\03_Collections.dll
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\bin\Debug\net5.0\03_Collections.pdb
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\obj\Debug\net5.0\03_Collections.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\obj\Debug\net5.0\03_Collections.AssemblyInfoInputs.cache
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\obj\Debug\net5.0\03_Collections.AssemblyInfo.cs
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\obj\Debug\net5.0\03_Collections.csproj.CoreCompileInputs.cache
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\obj\Debug\net5.0\03_Collections.dll
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\obj\Debug\net5.0\refint\03_Collections.dll
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\obj\Debug\net5.0\03_Collections.pdb
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\obj\Debug\net5.0\03_Collections.genruntimeconfig.cache
+C:\Users\s11328481.DCPS\Downloads\GitHub\4a-ajhs-multiuser-gameprogramming-23-24-SyperZ419\multiUserGameProgramming\03a_Collections\obj\Debug\net5.0\ref\03_Collections.dll

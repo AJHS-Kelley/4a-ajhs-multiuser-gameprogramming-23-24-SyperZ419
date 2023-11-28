@@ -51,7 +51,7 @@ namespace ExampleGameMethods
             }
             return name; // Returns name of character.
         }
-            
+
         static void GameOver(int playerCurrentHealth) // Checks to see if the player's health is less than or equal to zero, then tells them the game has ended. Requires player's current health. No return.
         {
             if (playerCurrentHealth <= 0)
@@ -60,19 +60,60 @@ namespace ExampleGameMethods
             }
         }
 
-        static string PlayerTurn(int playerCurrentHealth)
-        {
+        static string PlayerTurn(int playerCurrentHealth, string playerName)
+        {   int playerHealth = playerCurrentHealth;
             while (playerHealth > 0)
             {
-                string[] skillList = {"fireball", "icebeam", "thunderbolt","sword slash", "kamikaze", "heal", "guard", "dark void", "holy wrath"};
-                Console.WriteLine(skillList);
-                Console.WriteLine(playerName + ",please select an action from your skill list");
-                string skill = Console.ReadLine();
-                int count = skillList.Count(x => x == skill);
-                Console.WriteLine(count);
-                if (count > 0)
+                string[] skillList = {"fireball(1)", "icebeam(2)", "thunderbolt(3)","sword slash(4)", "kamikaze(5)", "heal(6)", "guard(7)", "dark void(8)", "holy wrath(9)"};
+                //Console.WriteLine(skillList);
+                Console.WriteLine("[{0}]", string.Join(", ", skillList)); // Code taken and modified from https://stackoverflow.com/questions/16265247/printing-all-contents-of-array-in-c-sharp
+                Console.WriteLine(playerName + ", please select an action from your skill list by typing the number for the skill.");
+                int skill = System.Convert.ToInt32(Console.ReadLine());
+                //int count = skillList.Count(x => x == skill);
+                //Console.WriteLine(count);
+                if (skill == 1)
                 {
-                    Console.WriteLine("You used " + skill);
+                    Console.WriteLine("You cast Fireball." );
+                    break;
+                } 
+                else if (skill == 2)
+                {
+                    Console.WriteLine("You cast Icebeam.");
+                    break;
+                } 
+                else if (skill == 3)
+                {
+                    Console.WriteLine("You cast Thunderbolt.");
+                    break;
+                } 
+                else if (skill == 4)
+                {
+                    Console.WriteLine("You used Sword Slash.");
+                    break;
+                } 
+                else if (skill == 5)
+                {
+                    Console.WriteLine("You cast Kamikaze.");
+                    break;
+                } 
+                else if (skill == 6)
+                {
+                    Console.WriteLine("You cast Heal.");
+                    break;
+                } 
+                else if (skill == 7)
+                {
+                    Console.WriteLine("You Guard.");
+                    break;
+                } 
+                else if (skill == 8)
+                {
+                    Console.WriteLine("You used Dark Void.");
+                    break;
+                } 
+                else if (skill == 9)
+                {
+                    Console.WriteLine("You used Holy Wrath.");
                     break;
                 } 
                 else
@@ -109,14 +150,11 @@ namespace ExampleGameMethods
         
         static void Main(string[] args)
         {
-            
-            
-            int playerHealth = 150;
             string playerName = NamePlayer();
             int[] stats = GenerateStats();
             ChooseEnemy();
-            PlayerTurn(playerHealth);
-            GameOver(playerHealth);
+            PlayerTurn(150, playerName);
+            GameOver(0);
         }
 
         
