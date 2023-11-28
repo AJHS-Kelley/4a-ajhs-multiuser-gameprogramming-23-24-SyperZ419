@@ -145,7 +145,7 @@ namespace ExampleGameMethods
             }
         }   return item*/
 
-
+        static
 
         
         static void Main(string[] args)
@@ -153,7 +153,8 @@ namespace ExampleGameMethods
             string playerName = NamePlayer();
             int[] stats = GenerateStats();
             ChooseEnemy();
-            PlayerTurn(150, playerName);
+            skill = PlayerTurn(150, playerName);
+            
             GameOver(0);
         }
 
