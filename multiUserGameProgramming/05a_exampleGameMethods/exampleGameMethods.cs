@@ -1,4 +1,4 @@
-// Xavier Oliver, Template, v0.4
+// Xavier Oliver, Template, v0.5
 using System;
 
 namespace ExampleGameMethods
@@ -60,7 +60,7 @@ namespace ExampleGameMethods
             }
         }
 
-        static int PlayerTurn(int playerCurrentHealth, string playerName) // Determines if the player can make their turn, then sees what skill they use. Requires player health.
+        /*static int PlayerTurn(int playerCurrentHealth, string playerName) // Determines if the player can make their turn, then sees what skill they use. Requires player health and player name.
         {   int playerHealth = playerCurrentHealth;
             while (playerHealth > 0)
             {
@@ -122,28 +122,29 @@ namespace ExampleGameMethods
                     continue;
                 }
             }
-            return skill; // Returns skill used.
-        }   
+            return skill; // Returns skill number.
+        }*/
 
-        static string PlayerItemChoose()
+        static int PlayerItemChoose(string playerName) // Checks to see if a chosen item is in the itme list, then tells the player they used that item. Requires player name.
         {
-            string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
-            Console.WriteLine(playerName + ",please select an item from your inventory.");
-            string item = Console.ReadLine();
-            for (i in range(itemList.Length - 1))
+            string[] itemList = {"potion(1)", "antidote(2)", "fire-boost(3)", "ice-boost(4)", "thunder-boost(5)", "dark-boost(6)", "light-boost(7)", "revival totem(8)"};
+            Console.WriteLine("[{0}]", string.Join(", ", itemList)); // Code taken and modified from https://stackoverflow.com/questions/16265247/printing-all-contents-of-array-in-c-sharp
+            Console.WriteLine(playerName + ",please select an item from your inventory by inputting that item's corresponding number.");
+            int item = System.Convert.ToInt32(Console.ReadLine());
+            for (i = 0; i < 9; i++)
             {
-                if (item == itemList[i])
+                if (i == item - 1)
                 {
-                    Console.WriteLine("You used " + item);
+                    Console.WriteLine("You used " + itemList[item - 1]);
                     break;
                 }
                 else
                 {
-                    Console.WriteLine("Chosen item not found.")
-                    continue
+                    Console.WriteLine("Chosen item not found.");
+                    continue;
                 }
             }
-        }   return item
+        }   return item; // Returns item number.
 
         static float DamageCalc(int skillUsed, int enemyAttack, int playerDefense) // Calculates how much damage the player took. Requires the enemy's attack stat, the skill used by the player, and the player's defense value.
         {
@@ -176,6 +177,7 @@ namespace ExampleGameMethods
             int[] stats = GenerateStats();
             ChooseEnemy();
             int skill = PlayerTurn(150, playerName);
+            PlayerItemChoose(playerName);
             DamageCalc(7, 45, stats[1]);
             GameOver(0);
         }
