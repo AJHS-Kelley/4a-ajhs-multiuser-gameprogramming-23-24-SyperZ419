@@ -60,7 +60,7 @@ namespace ExampleGameMethods
             }
         }
 
-        static string PlayerTurn(int playerCurrentHealth, string playerName)
+        static int PlayerTurn(int playerCurrentHealth, string playerName)
         {   int playerHealth = playerCurrentHealth;
             while (playerHealth > 0)
             {
