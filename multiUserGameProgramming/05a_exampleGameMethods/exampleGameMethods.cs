@@ -60,7 +60,7 @@ namespace ExampleGameMethods
             }
         }
 
-        static int PlayerTurn(int playerCurrentHealth, string playerName)
+        static int PlayerTurn(int playerCurrentHealth, string playerName) // Determines if the player can make their turn, then sees what skill they use. Requires player health.
         {   int playerHealth = playerCurrentHealth;
             while (playerHealth > 0)
             {
@@ -122,10 +122,10 @@ namespace ExampleGameMethods
                     continue;
                 }
             }
-            return skill;
+            return skill; // Returns skill used.
         }   
 
-        /*static string PlayerItemChoose()
+        static string PlayerItemChoose()
         {
             string[] itemList = {"potion", "antidote", "fire-boost", "ice-boost", "thunder-boost", "dark-boost", "light-boost", "revival totem"};
             Console.WriteLine(playerName + ",please select an item from your inventory.");
@@ -143,11 +143,11 @@ namespace ExampleGameMethods
                     continue
                 }
             }
-        }   return item*/
+        }   return item
 
-        static float DamageCalc(int skillUsed, int enemyAttack, int playerDefense)
+        static float DamageCalc(int skillUsed, int enemyAttack, int playerDefense) // Calculates how much damage the player took. Requires the enemy's attack stat, the skill used by the player, and the player's defense value.
         {
-            int damageTaken = enemyAttack - playerDefense;
+            float damageTaken = enemyAttack - playerDefense;
             if (damageTaken <= 0)
             {
                 damageTaken = 0;
@@ -166,15 +166,9 @@ namespace ExampleGameMethods
             {
                 Console.WriteLine("You took " + damageTaken + " damage.");
             }
+            return damageTaken; // Returns how much damage the player took.
         }      
         
-            
-
-            
-        
-            
-        
-
         
         static void Main(string[] args)
         {
