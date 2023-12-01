@@ -20,11 +20,11 @@ namespace ExampleGameMethods
             //int i = 0;
             int[] stats = {1, 2, 3, 4, 5};
             //while (i < 5) {
-            stats[0] = (rndNum.Next(1, 30)); // Strength
-            stats[1] = (rndNum.Next(1, 30)); // Defense
-            stats[2] = (rndNum.Next(1, 30)); // Speed
-            stats[3] = (rndNum.Next(1, 30)); // Accuracy
-            stats[4] = (rndNum.Next(1, 15)); // Luck
+            stats[0] = (rndNum.Next(1, 31)); // Strength
+            stats[1] = (rndNum.Next(1, 31)); // Defense
+            stats[2] = (rndNum.Next(1, 31)); // Speed
+            stats[3] = (rndNum.Next(1, 31)); // Accuracy
+            stats[4] = (rndNum.Next(1, 16)); // Luck
             Console.WriteLine("Strength: " + stats[0]);
             Console.WriteLine("Defense: " + stats[1]);
             Console.WriteLine("Speed: " + stats[2]);
@@ -60,15 +60,16 @@ namespace ExampleGameMethods
             }
         }
 
-        /*static int PlayerTurn(int playerCurrentHealth, string playerName) // Determines if the player can make their turn, then sees what skill they use. Requires player health and player name.
+        static int PlayerTurn(int playerCurrentHealth, string playerName) // Determines if the player can make their turn, then sees what skill they use. Requires player health and player name.
         {   int playerHealth = playerCurrentHealth;
+            int skill = -1;
             while (playerHealth > 0)
             {
                 string[] skillList = {"fireball(1)", "icebeam(2)", "thunderbolt(3)","sword slash(4)", "kamikaze(5)", "heal(6)", "guard(7)", "dark void(8)", "holy wrath(9)"};
                 //Console.WriteLine(skillList);
                 Console.WriteLine("[{0}]", string.Join(", ", skillList)); // Code taken and modified from https://stackoverflow.com/questions/16265247/printing-all-contents-of-array-in-c-sharp
                 Console.WriteLine(playerName + ", please select an action from your skill list by typing the number for the skill.");
-                int skill = System.Convert.ToInt32(Console.ReadLine());
+                skill = System.Convert.ToInt32(Console.ReadLine());
                 //int count = skillList.Count(x => x == skill);
                 //Console.WriteLine(count);
                 if (skill == 1)
@@ -123,7 +124,7 @@ namespace ExampleGameMethods
                 }
             }
             return skill; // Returns skill number.
-        }*/
+        }
 
         static int PlayerItemChoose(string playerName) // Checks to see if a chosen item is in the itme list, then tells the player they used that item. Requires player name.
         {
@@ -131,7 +132,7 @@ namespace ExampleGameMethods
             Console.WriteLine("[{0}]", string.Join(", ", itemList)); // Code taken and modified from https://stackoverflow.com/questions/16265247/printing-all-contents-of-array-in-c-sharp
             Console.WriteLine(playerName + ",please select an item from your inventory by inputting that item's corresponding number.");
             int item = System.Convert.ToInt32(Console.ReadLine());
-            for (i = 0; i < 9; i++)
+            for (int i = 0; i < 9; i++)
             {
                 if (i == item - 1)
                 {
@@ -144,7 +145,8 @@ namespace ExampleGameMethods
                     continue;
                 }
             }
-        }   return item; // Returns item number.
+            return item; // Returns item number.
+        }   
 
         static float DamageCalc(int skillUsed, int enemyAttack, int playerDefense) // Calculates how much damage the player took. Requires the enemy's attack stat, the skill used by the player, and the player's defense value.
         {
@@ -176,9 +178,9 @@ namespace ExampleGameMethods
             string playerName = NamePlayer();
             int[] stats = GenerateStats();
             ChooseEnemy();
-            int skill = PlayerTurn(150, playerName);
+            int skillUsed = PlayerTurn(150, playerName);
             PlayerItemChoose(playerName);
-            DamageCalc(7, 45, stats[1]);
+            DamageCalc(skillUsed, 45, stats[1]);
             GameOver(0);
         }
 
@@ -189,5 +191,3 @@ namespace ExampleGameMethods
 
     }
 }
-
-// Code Review by Geovanny Moncayo
