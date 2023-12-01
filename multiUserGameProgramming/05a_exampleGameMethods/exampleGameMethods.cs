@@ -37,7 +37,7 @@ namespace ExampleGameMethods
         {
             Console.WriteLine("Name your character.");
             string name = Console.ReadLine();
-            Console.WriteLine("Your input name is " + name + " correct?\n Please type 1(yes) or 2(no)");
+            Console.WriteLine("Your input name is " + name + " correct?\n Please type 1 for yes, or 2 for no.");
             int nameConfirm = System.Convert.ToInt32(Console.ReadLine());
             if (nameConfirm == 1)
             {
